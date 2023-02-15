@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+:root{  
+    --ff-heading: 'Arial';   
+    --fs-heading: Bold;
+    --ff-texting: 'Palanquin';
+
+    --bg-primary: #8e9aaf;
+    --bg-secundary: #CBC0D3;
+    --bg--body: #EFF1FF;
+    --bg--bodyh1: #FEEAFA;
+
+    --fc-primary: #ffffff;
+    --fc-secundary: #23053A;
+    --fc-third: #4A4E69; 
+    
+}
+.page {
+  max-width: 33rem;
+   
+}
+
+@media (max-width: 604px){  
+  .card h2{    
+    margin-left: -200px;   
+  }  
+}
+
+@media (max-width: 318px){
+  .page{
+    width: 318px;
+  } 
+}
+
+
+header{    
+    background-color: var(--bg-primary);
+    width: 100%;
+    height: auto;
+    text-align: center;    
+   
+    border-radius: 0.2rem;
+}
+.name-header{
+  background-color: var(--bg-secundary);  
+  margin-top: 2rem;   
+}
+header h1{
+  color: var(--fc-primary);
+  font-size: 2.5rem; 
+  text-shadow: 0rem 0.05rem #6b3b8f;
+  font-weight: var(--fs-heading);
+}
+main p{
+  font-family: var(--ff-texting);
+  margin-top: 1.875rem;
+}
+body{
+  font-family: var(--ff-heading);
+  color: var(--fc-secundary);
+  background-color: var(--bg--body);
+}
+.page{
+  max-width: 38rem /*seguindo a tabela 38rem equivale aos 380px da pagina padrão*/;
+  margin: 0 auto; /*fazendo com que os itens fiquem centralizados
+  seguindo a magem de 38rem*/
+}
+
+img {
+  /*a imgaem com largura de 100% e altura auto, a imagem se ajusta a caixa defina a largura de
+  38rem definida no max-wdth do page*/
+    width: 100%;
+    height: auto;
+  }
+.logo img{
+    width: 8.5rem;
+    height: 8.5rem;
+    margin-top: 2rem;
+    border-radius: 5rem;
+    box-shadow: 0.10rem 0.5rem 0.5rem black;
+}
+.card{  
+  text-align: center;  
+  position: relative;
+  /*para que o position absolute do h1 do card seja
+  de fato absoluto ao cartão e não absoluto a pagina toda*/
+}
+.card img{
+  width: 20rem;
+  height: 15.625rem;
+  object-fit: cover;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 3.15rem;
+
+  animation-name: topup;
+  animation-duration: 1000ms;
+
+}
+.card .milk-shk img{
+  width: 20rem;  
+  height: 28rem;
+}
+.card  .picole img{
+  width: 20rem;  
+  height: 28rem;
+}
+.card h2{
+  position: absolute;
+  height: 2.188rem;
+  width: 7rem;
+  
+  color: var(--fc-third);
+  background-color: var(--bg--bodyh1);
+  border-radius: 10rem;
+  font-size: 1.2rem; 
+  padding-top: 0.375rem;
+  
+  left: 21.063rem;
+  margin-top: 3.550rem; 
+
+  animation-name: topdown;
+  animation-duration: 5000ms;
+  
+}
+
+@keyframes topup {
+  0%{
+    opacity: 0;
+    transform: translateY(35px)
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes topdown {
+  0%{
+    opacity: 0;
+    transform: translateY(-5px)
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
